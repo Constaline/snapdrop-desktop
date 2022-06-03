@@ -6,7 +6,8 @@
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
     "build": "npm run compile && npm run build:bytenode && electron-builder --config builder_config/base.conf.js",
-    "build:bytenode": "electron builder_config/build.bytenode.js"
+    "build:bytenode": "electron builder_config/build.bytenode.js",
+    "preinstall": "node build_script/set-npmrc.js"
   },
   "dependencies": {
     "address": "1.2.0",

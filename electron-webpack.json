@@ -1,7 +1,7 @@
 {
   "main": {
     "sourceDirectory": "src/main",
-    "webpackConfig": "electron-webpack.main.js"
+    "webpackConfig": "build_script/electron-webpack.main.js"
   },
   "renderer": null
 }
