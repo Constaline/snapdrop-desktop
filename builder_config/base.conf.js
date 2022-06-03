@@ -4,6 +4,10 @@ let baseConfig = {
   "directories": {
     "output": "build"
   },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
   "dmg": {
     "contents": [
       {
@@ -43,5 +47,11 @@ let baseConfig = {
     "icon": "build/icon/icon.png"
   }
 }
+
+let hooks = {
+  "afterPack": "builder_config/hooks/afterPack.js",
+}
+
+baseConfig = Object.assign(baseConfig, hooks)
 
 module.exports = baseConfig
