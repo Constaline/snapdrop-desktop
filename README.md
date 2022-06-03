@@ -1,5 +1,5 @@
 # snapdrop-desktop
-Just the original [Snapdrop](https://github.com/RobinLinus/Snapdrop), with complete Node.js server.
+Just the original [Snapdrop](https://github.com/RobinLinus/Snapdrop), with complete Electron App.
 
 Modified from [DrBassman/node-snapdrop](https://github.com/DrBassman/node-snapdrop) so that when server & clients are on the same LAN, clients discover each other.
 
