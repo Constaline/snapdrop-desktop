@@ -72,7 +72,6 @@ src/browser/provider
 src/browser/cache.js
 
 # others
-.npmrc
 package-lock.json
 
 build/*

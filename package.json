@@ -5,10 +5,12 @@
     "start": "npm run dev",
     "dev": "electron-webpack dev",
     "compile": "electron-webpack",
-    "build": "npm run compile && electron-builder --config builder_config/base.conf.js"
+    "build": "npm run compile && npm run build:bytenode && electron-builder --config builder_config/base.conf.js",
+    "build:bytenode": "electron builder_config/build.bytenode.js"
   },
   "dependencies": {
     "address": "1.2.0",
+    "bytenode": "1.3.6",
     "express": "4.18.1",
     "source-map-support": "0.5.21",
     "ua-parser-js": "0.7.31",
@@ -20,6 +22,7 @@
     "electron": "13.5.1",
     "electron-builder": "21.2.0",
     "electron-webpack": "2.8.2",
+    "fs-extra": "8.1.0",
     "webpack": "4.46.0"
   },
   "repository": {

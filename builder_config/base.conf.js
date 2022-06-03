@@ -4,8 +4,10 @@ let baseConfig = {
   "directories": {
     "output": "build"
   },
+  "asarUnpack": [
+    "**/*.jsc"
+  ],
   "files": [
-    "dist/**/*",
     "README.md"
   ],
   "dmg": {
