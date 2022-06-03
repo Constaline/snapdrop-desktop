@@ -1,9 +1,14 @@
 const { app } = require('electron');
 const path = require('path');
 
+// rewrite __static path in production
+if (process.env.NODE_ENV !== 'development') {
+  global.__static = require('path').join(__dirname, 'static').replace(/\\/g, '\\\\')
+}
+
 // set server running port
 global.PORT = 30003;
-global.PAGE_URL = `http://127.0.0.1:${30003}`;
+global.PAGE_URL = `http://127.0.0.1:${global.PORT}`;
 process.env.PORT = global.PORT;
 
 // set server running mode
@@ -16,7 +21,9 @@ if (app.isPackaged) {
 process.argv = [...process.argv, global.SERVER_MODE];
 
 
-global.CLIENT_PAGE_PATH = path.join(__static, 'client');
+global.CLIENT_PAGE_PATH = path.join(global.__static, 'client');
+
+console.log('global.CLIENT_PAGE_PATH:', global.CLIENT_PAGE_PATH)
 
 // set mainWindow value
 global.mainWindow

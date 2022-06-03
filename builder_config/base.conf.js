@@ -8,8 +8,13 @@ let baseConfig = {
     "**/*.jsc"
   ],
   "files": [
+    // add static folder to asar
+    "static/**/*",
+    // README.md is required to asarmor
     "README.md"
   ],
+  // rewrite extraResources to add static folder to asar
+  "extraResources": [],
   "dmg": {
     "contents": [
       {
