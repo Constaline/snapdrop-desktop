@@ -4,6 +4,10 @@ app.on('ready', () => {
   createMainWindow()
 });
 
+app.on('window-all-closed', () => {
+  app.quit();
+});
+
 function createMainWindow() {
   global.mainWindow = new BrowserWindow({ 
     width: 960, 
