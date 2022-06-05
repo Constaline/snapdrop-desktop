@@ -63,7 +63,10 @@
     <x-peers class="center"></x-peers>
     <x-no-peers>
         <h2>Open Snapdrop on other devices to send files</h2>
-        <h3 id="showWebAddr"></h3>
+        <div>
+            <h3 id="showWebAddr"></h3>
+            <div id="qrcode"></div>
+        </div>
     </x-no-peers>
     <x-instructions desktop="Click to send files or right click to send a message" mobile="Tap to send files or long tap to send a message"></x-instructions>
     <!-- Footer -->
@@ -218,6 +221,7 @@
     <script src="scripts/ui.js"></script>
     <script src="scripts/theme.js" async></script>
     <script src="scripts/clipboard.js" async></script>
+    <script src="scripts/qrcode.js"></script>
     <script src="scripts/getaddr.js"></script>
     <!-- Sounds -->
     <audio id="blop" autobuffer="true">

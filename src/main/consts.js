@@ -20,8 +20,11 @@ if (app.isPackaged) {
 }
 process.argv = [...process.argv, global.SERVER_MODE];
 
-
-global.CLIENT_PAGE_PATH = path.join(global.__static, 'client');
+let pageDirPath = __static
+if(process.env.NODE_ENV !== 'development') {
+  pageDirPath = global.__static
+} 
+global.CLIENT_PAGE_PATH = path.join(pageDirPath, 'client');
 
 console.log('global.CLIENT_PAGE_PATH:', global.CLIENT_PAGE_PATH)
 
